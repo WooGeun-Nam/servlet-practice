@@ -8,7 +8,25 @@
 	<artifactId>helloweb</artifactId>
 	<packaging>war</packaging>
 	
+	<dependencies>
+		<!-- servlet -->
+		<!-- https://mvnrepository.com/artifact/javax.servlet/servlet-api -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>4.0.1</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>jsp-api</artifactId>
+			<version>2.2</version>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+	
 	<build>
 		<finalName>helloweb</finalName>
 	</build>
+	
 </project>
