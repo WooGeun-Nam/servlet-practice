@@ -3,7 +3,7 @@
 <%@ page import="com.douzone.guestbook.vo.GuestBookVo"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <% 
-	List<GuestBookVo> list = new GuestBookDao().findAll();
+	List<GuestBookVo> list = (List<GuestBookVo>)request.getAttribute("list");
 %>
 <html>
 <head>
@@ -36,7 +36,7 @@
 			<td>[<%=i %>]</td>
 			<td><%=vo.getName() %></td>
 			<td><%=vo.getRegDate() %></td>
-			<td><a href="/guestbook01/deleteform.jsp?no=<%=vo.getNo()%>">삭제</a></td>
+			<td><a href="/guestbook02/gb?a=deleteform&&no=<%=vo.getNo()%>">삭제</a></td>
 		</tr>
 		<tr>
 			<td colspan="4"><textarea cols=60 rows=3 style="resize: none;"><%=vo.getMessage() %></textarea></td>
