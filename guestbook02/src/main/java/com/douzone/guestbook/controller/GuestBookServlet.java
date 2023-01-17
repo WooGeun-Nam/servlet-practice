@@ -1,6 +1,7 @@
 package com.douzone.guestbook.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
@@ -45,7 +46,10 @@ public class GuestBookServlet extends HttpServlet {
 				new GuestBookDao().deleteByPassword(no, password);
 				response.sendRedirect("/guestbook02/gb");
 			} else {
-				response.sendRedirect("/guestbook02/gb");
+				response.setContentType("text/html; charset=UTF-8");
+				PrintWriter writer = response.getWriter();
+				writer.println("<script>alert('비밀번호가 틀렸습니다.'); location.href='"+"/guestbook02/gb?a=deleteform&&no=" + no+"';</script>"); 
+				writer.close();
 			}
 		} else{
 			List<GuestBookVo> list = new GuestBookDao().findAll();
