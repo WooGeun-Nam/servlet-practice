@@ -4,7 +4,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
-	List<EmaillistVo> list = new EmaillistDao().findAll(); 
+List<EmaillistVo> list = new EmaillistDao().findAll();
 %>
 <!DOCTYPE html>
 <html>
@@ -19,7 +19,7 @@
 	
 	<%
 		for(EmaillistVo vo : list) {
-	%>
+		%>
 	<table border="1" cellpadding="5" cellspacing="2">
 		<tr>
 			<td align=right>성: </td>
@@ -35,12 +35,12 @@
 		</tr>
 	</table>
 	<br>
-	<p>
-		<a href="/emaillist01/form.jsp">추가메일 등록</a>
-	</p>
-	<br>
 	<%
 		}
 	%>
+	<p>
+		<a href="/emaillist01/form.jsp">새 이메일 등록</a>
+	</p>
+	<br>
 </body>
 </html>
