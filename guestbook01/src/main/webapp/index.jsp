@@ -36,7 +36,7 @@
 			<td><%=i %></td>
 			<td><%=vo.getName() %></td>
 			<td><%=vo.getRegDate() %></td>
-			<td><a href="/guestbook01/deleteform.jsp?no=5">삭제</a></td>
+			<td><a href="/guestbook01/deleteform.jsp?no=<%=vo.getNo()%>">삭제</a></td>
 		</tr>
 		<tr>
 			<td colspan="4"><textarea cols=60 rows=3 style="resize: none;"><%=vo.getMessage() %></textarea></td>
