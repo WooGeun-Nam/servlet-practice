@@ -39,7 +39,7 @@
 			<td><a href="/guestbook01/deleteform.jsp?no=5">삭제</a></td>
 		</tr>
 		<tr>
-			<td colspan=4><%=vo.getMessage() %></td> <!-- 멀티라인으로 개행까지 되게끔 -->
+			<td colspan="4"><textarea cols=60 rows=3 style="resize: none;"><%=vo.getMessage() %></textarea></td>
 		</tr>
 	</table>
 	<%

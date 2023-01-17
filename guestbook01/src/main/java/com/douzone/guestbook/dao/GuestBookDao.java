@@ -144,3 +144,5 @@ public class GuestBookDao {
 		return conn;
 	}
 }
+
+// <td colspan=4><%=vo.getMessage() %></td> <!-- 멀티라인으로 개행까지 되게끔 -->
