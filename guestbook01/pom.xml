@@ -39,6 +39,6 @@
 	</dependencies>
 	
 	<build>
-		<finalName>guestbook01</finalName>	
+		<finalName>guestbook01</finalName>
 	</build>	
 </project>
