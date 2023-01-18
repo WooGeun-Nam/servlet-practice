@@ -11,12 +11,12 @@
 	
 	if (guestBook.getPassword().equals(password)) {
 		new GuestBookDao().deleteByPassword(no, password);
-		response.sendRedirect("/guestbook01");
+		response.sendRedirect(request.getContextPath());
 	} else {
 %>		
 		<script type="text/javascript">
 			alert("비밀번호가 틀렸습니다.");
-			location.href = "/guestbook01/deleteform.jsp?no=" + <%=no%>;
+			location.href = request.getContextPath()+"/deleteform.jsp?no=" + <%=no%>;
 		</script>
 <%	
 	}

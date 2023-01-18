@@ -35,7 +35,7 @@ public class GuestBookServlet extends HttpServlet {
 			
 			new GuestBookDao().insert(vo);
 			
-			response.sendRedirect("/guestbook02/gb");
+			response.sendRedirect(request.getContextPath()+"/gb");
 		} else if ("delete".equals(action)) {
 			Long no = Long.parseLong(request.getParameter("no"));
 			String password = request.getParameter("password");
@@ -44,11 +44,11 @@ public class GuestBookServlet extends HttpServlet {
 			
 			if (guestBook.getPassword().equals(password)) {
 				new GuestBookDao().deleteByPassword(no, password);
-				response.sendRedirect("/guestbook02/gb");
+				response.sendRedirect(request.getContextPath()+"/gb");
 			} else {
 				response.setContentType("text/html; charset=UTF-8");
 				PrintWriter writer = response.getWriter();
-				writer.println("<script>alert('비밀번호가 틀렸습니다.'); location.href='"+"/guestbook02/gb?a=deleteform&&no=" + no+"';</script>"); 
+				writer.println("<script>alert('비밀번호가 틀렸습니다.'); location.href='"+request.getContextPath()+"/gb?a=deleteform&&no=" + no+"';</script>"); 
 				writer.close();
 			}
 		} else{

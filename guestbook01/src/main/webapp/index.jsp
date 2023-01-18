@@ -11,7 +11,7 @@
 <title>방명록</title>
 </head>
 <body>
-	<form action="/guestbook01/add.jsp" method="post">
+	<form action="<%=request.getContextPath() %>/add.jsp" method="post">
 	<table border=1 width=500>
 		<tr>
 			<td>이름</td><td><input type="text" name="name"></td>
@@ -36,7 +36,7 @@
 			<td>[<%=i %>]</td>
 			<td><%=vo.getName() %></td>
 			<td><%=vo.getRegDate() %></td>
-			<td><a href="/guestbook01/deleteform.jsp?no=<%=vo.getNo()%>">삭제</a></td>
+			<td><a href="<%=request.getContextPath() %>/deleteform.jsp?no=<%=vo.getNo()%>">삭제</a></td>
 		</tr>
 		<tr>
 			<td colspan="4"><textarea cols=60 rows=3 style="resize: none;"><%=vo.getMessage() %></textarea></td>

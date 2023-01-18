@@ -15,5 +15,5 @@ request.setCharacterEncoding("utf-8");
 	
 	new GuestBookDao().insert(vo);
 	
-	response.sendRedirect("/guestbook01");
+	response.sendRedirect(request.getContextPath());
 %>
