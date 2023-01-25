@@ -16,6 +16,7 @@
 </head>
 <body>
 	<h4>scope(객체의 존속 범위)</h4>
+	== page Scope =================<br>
 	${vo.no } <br>
 	${vo.name } <br>
 	
@@ -23,7 +24,7 @@
 	${requestScope.vo.no } <br>
 	${requestScope.vo.name } <br>
 		
-	==  session Scope =================<br>
+	== session Scope =================<br>
 	${sessionScope.vo.no } <br>
 	${sessionScope.vo.name } <br>
 	
